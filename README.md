@@ -1,4 +1,4 @@
-# Recruitment_management_system
+# A simple management system
 This mini-project is a management system fully developed using Python and Python TKinter Module.
 Following are the components used in the project:
 1. Hashing
