@@ -97,7 +97,7 @@ def register_in():
 	#bg image#################################
 	#register_menu.bg= PhotoImage(file="images/registerPic.png")
 	#register_menu.bg_image1=Label(register_menu,image=register_menu.bg).place(x=0,y=0,relwidth=1,relheight=1)
-	k_font = tkinter.font.Font(family='Times new roman', size=10, weight=tkinter.font.BOLD)
+	k_font = tkinter.font.Font(family='Times new roman', size=9, weight=tkinter.font.BOLD)
 	
 
 	#title2_label=Label(register_menu,relief=GROOVE,text="DRESS RENTAL SYSTEM REGISTRATION PORTAL",font=('Times new roman',20,'bold'))
@@ -116,16 +116,16 @@ def register_in():
 	password_label=Label(register_menu,text="Password",bd=5,relief=FLAT,font=('arial',20,'bold'))
 	password_label.grid(row=3,column=1,padx=200,pady=10,sticky="w")
 
-	id_input=Entry(register_menu,bd=10,relief=GROOVE)
+	id_input=Entry(register_menu,bd=10,relief=FLAT)
 	id_input.grid(row=0,column=2,padx=200,pady=10,sticky="w")
 
-	name_input=Entry(register_menu,bd=10,relief=GROOVE)
+	name_input=Entry(register_menu,bd=10,relief=FLAT)
 	name_input.grid(row=1,column=2,padx=200,pady=10,sticky="w")
 
-	email_input=Entry(register_menu,bd=10,relief=GROOVE)
+	email_input=Entry(register_menu,bd=10,relief=FLAT)
 	email_input.grid(row=2,column=2,padx=200,pady=10,sticky="w")
 
-	password_input=Entry(register_menu,bd=10,relief=GROOVE)
+	password_input=Entry(register_menu,bd=10,relief=FLAT)
 	password_input.grid(row=3,column=2,padx=200,pady=10,sticky="w")
 
 	# loginbutton1=Button(register_menu,command=login_in,text=" Login ",bg='light blue',height=2,width=14,font=k_font)
@@ -153,7 +153,8 @@ def register_check():
 	id=id_input.get()
 	name=name_input.get()
 	email=email_input.get()
-	password=password_input.get()
+	storePassword = password_input.get()
+	password=storePassword
 
 	if len(id)==0 or len(name) == 0 or len(email) == 0 or len(password) == 0:
 		tkinter.messagebox.showinfo("Register","You left one or more fields blank O_O")
